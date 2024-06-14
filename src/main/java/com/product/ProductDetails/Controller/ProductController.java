@@ -19,6 +19,12 @@ public class ProductController {
         return productServiceImpl.getProductDetails(productId);
     }
 
+    @GetMapping("/product/hello")
+    @ResponseBody
+    public String helloMsg(){
+        return "hello dhanush";
+    }
+
     @GetMapping("/product/allProduct")
     public List<Product> alldeatils(){
         return productServiceImpl.allDetails();
